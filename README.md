@@ -1,5 +1,5 @@
 # wordpress
-
+<!DOCTYPE html>
 // custom post 
 function register_custom_post(){
 // service start 
@@ -53,3 +53,4 @@ register_post_type('Doctors',array(
     ));
 }
 add_action('init', 'register_custom_post');
+</html>
