@@ -9,7 +9,28 @@
 </head>
 <body>
 	<h3>
-	// custom post 
+		
+wp_enqueue_style( 'style-css', get_stylesheet_uri() );
+wp_enqueue_style( 'style-boot', get_template_directory_uri() . '/css/bootstrap.min.css' );
+wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '1.0.0', true );
+
+
+add_theme_support( 'title-tag' );
+add_theme_support('custom-logo');
+add_theme_support('post-thumbnails');
+
+
+// logo
+register_sidebar( array(
+    'name'=>'Logo right',
+    'id'=>'rightlogo',
+    'before'=>'',
+    'after'=>''
+) );	
+
+		
+				
+////////////////// custom post /////////////////////////////
 function register_custom_post(){
 // service start 
 register_post_type('services',array(
